@@ -1,0 +1,27 @@
+{
+  "name": "hexo-math-enhance",
+  "version": "0.1.0",
+  "description": "Optional mathematical Markdown rendering for Hexo",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "repository": { "type": "git", "url": "git+https://github.com/shunnli/hexo-math-enhance.git" },
+  "homepage": "https://github.com/shunnli/hexo-math-enhance#readme",
+  "keywords": ["hexo", "markdown", "mathjax", "latex", "biblatex", "theorem"],
+  "engines": { "node": ">=22.13.0" },
+  "files": ["index.js", "lib", "core", "assets", "styles.css", "README.md", "SYNTAX.md", "examples/quickstart"],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "test:browser": "node test/browser.cjs"
+  },
+  "peerDependencies": { "hexo": ">=7" },
+  "devDependencies": { "playwright": "1.63.0" },
+  "dependencies": {
+    "@citation-js/core": "0.9.0",
+    "@citation-js/plugin-bibtex": "0.9.0",
+    "@citation-js/plugin-csl": "0.9.0",
+    "@mathjax/src": "4.1.3",
+    "@mathjax/mathjax-newcm-font": "4.1.3",
+    "markdown-it": "14.3.2",
+    "markdown-it-footnote": "4.0.0"
+  }
+}

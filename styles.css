@@ -1,0 +1,29 @@
+.math-enhance { overflow-wrap: anywhere; }
+.math-enhance .math-block { max-width: 100%; margin: 1em 0; overflow-wrap: normal; }
+.math-enhance .math-scroll { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: .25em .125em; margin: 0; }
+/* MathJax 4 inline formulas may contain several SVG siblings. Grid stacks
+   those pieces vertically; theme scrolling also clips their baselines. */
+.math-enhance .math-inline mjx-container[jax="SVG"] {
+  display: inline !important;
+  overflow: visible;
+  padding: 0;
+  margin: 0;
+  max-width: none;
+  line-height: 0;
+}
+.math-enhance .math-inline mjx-container[jax="SVG"] > svg { display: inline !important; }
+/* One scroll container for a display formula, with unclipped SVG contents. */
+.math-enhance .math-scroll mjx-container[jax="SVG"][display] {
+  overflow: visible;
+  padding: 0;
+  margin: 0 !important;
+  max-width: none;
+}
+.math-enhance .statement { border-left: 3px solid #49b1f5; padding: .6em 1em; margin: 1.2em 0; background: rgba(73,177,245,.08); }
+.math-enhance .statement-title { font-weight: 700; margin: 0 0 .5em; }
+.math-enhance .proof, .math-enhance .solution, .math-enhance .remark, .math-enhance .note { background: transparent; border-left-color: #888; }
+.math-enhance .proof::after, .math-enhance .solution::after { content: '□'; display: block; text-align: right; }
+.math-enhance .reference-links a { margin-left: .6em; }
+.math-enhance .text-highlight { background: #ffff00; color: #17272c; }
+.math-enhance .highlight-green { background: #98fb98; }
+.math-enhance .highlight-pink { background: #ffb6c1; }
